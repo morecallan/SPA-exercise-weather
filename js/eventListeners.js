@@ -24,10 +24,11 @@ function collectForecastWeatherData() {
 
 function outputCurrentWeather() {
     var currentWeather = Weather.getWeather();
+    outputWeatherToDom(currentWeather, "Your Current Weather is");
     console.log("currentWeather", currentWeather);
 }
 
 function outputForecastWeather() {
     var forecastWeather = Weather.getWeather();
-    console.log("forecastWeather", forecastWeather);
+    outputWeatherToDom(forecastWeather, "Your 5-day Forecast is");
 }

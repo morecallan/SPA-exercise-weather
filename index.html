@@ -5,12 +5,31 @@
     <!-- Bootstrap: Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="weather.css">
+    <link rel="stylesheet" type="text/css" href="CSS/css/weather-icons.css">
+    <link rel="stylesheet" type="text/css" href="CSS/css/weather-icons.min.css">
 </head>
 <body>
+<form id="zipCodeForm" class="form-inline" onsubmit="return false">
+    <div class="form-group">
+        <label class="control-label" for="inputSuccess4">Zip Code</label>
+        <input type="text" class="form-control" name="postalCode" placeholder="Zip Code" aria-describedby="inputSuccess4Status">
+        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+        <span id="zipCodeStatus" class="sr-only"></span>
+    </div>
+    <button type="button" class="btn btn-primary" id="current">Get Current Weather</button>
+    <button type="button" class="btn btn-primary" id="forecast">Get 5 Day Forecast</button>
+</form>
 
 
+<div id="weatherOutput"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Bootstrap: Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/eventListeners.js"></script>
+<script type="text/javascript" src="js/domOutput.js"></script>
 </body>
 </html>

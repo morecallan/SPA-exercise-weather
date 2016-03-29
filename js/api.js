@@ -13,7 +13,7 @@ var Weather = (() => {
               // api.openweathermap.org/data/2.5/forecast
 
             //Step 2: Go get it
-              let APIReq = "http://api.openweathermap.org/data/2.5/" + typeOfForecast + "?zip=" + zip + ",us&APPID=1014566b9e328e7826d250c827d7eb54";
+              let APIReq = "http://api.openweathermap.org/data/2.5/" + typeOfForecast + "?zip=" + zip + ",us&units=imperial&APPID=1014566b9e328e7826d250c827d7eb54";
               newRew.open("GET", APIReq);
               newRew.send();
 
