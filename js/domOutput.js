@@ -13,9 +13,9 @@ function outputWeatherToDom(weatherToParse, heading) {
         dayOrNight = "night";
     }
     var completedWeatherIcon = `<i class="wi wi-owm-${dayOrNight}-${weather}""></i>`
-    buildstring += `<h2> ${heading} </h2>`
+    buildstring += `<div class="currentWeather"><h2> ${heading} </h2>`
     buildstring += `<p> Current Temp: ${weatherToParse.main.temp}</p>`
     buildstring += `<p> ${weatherToParse.weather[0].description} </p>`
-    buildstring += completedWeatherIcon
+    buildstring += `${completedWeatherIcon}</div>`
     weatherOutputContainer.innerHTML = buildstring;
 }
