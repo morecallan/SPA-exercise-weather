@@ -19,16 +19,15 @@ function collectCurrentWeatherData() {
 function collectForecastWeatherData() {
     let userInputZip = document.getElementsByName("postalCode")[0].value
     Weather.loadWeatherForecastFromAPI(userInputZip, "forecast", outputForecastWeather);
-}
-
+};
 
 function outputCurrentWeather() {
     var currentWeather = Weather.getWeather();
     outputWeatherToDom(currentWeather, "Your Current Weather is");
     console.log("currentWeather", currentWeather);
-}
+};
 
 function outputForecastWeather() {
     var forecastWeather = Weather.getWeather();
     outputforecastToDom(forecastWeather, "Your 5-day Forecast is");
-}
+};
