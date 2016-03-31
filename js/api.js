@@ -30,6 +30,7 @@ var Weather = (() => {
               //Step 6: Create callback for once the messages page loads
               function messagesSuccess() {
                 weatherObject = JSON.parse(this.responseText);
+                console.log("weatherObject", weatherObject);
                 callbackFunc();
             }
         },

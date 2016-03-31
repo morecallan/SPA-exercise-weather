@@ -30,5 +30,5 @@ function outputCurrentWeather() {
 
 function outputForecastWeather() {
     var forecastWeather = Weather.getWeather();
-    outputWeatherToDom(forecastWeather, "Your 5-day Forecast is");
+    outputforecastToDom(forecastWeather, "Your 5-day Forecast is");
 }
